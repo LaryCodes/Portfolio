@@ -3,7 +3,6 @@
 import { Github, Mail, Linkedin, FileCode2, Database, Layout, Cpu, Code2, ExternalLink } from "lucide-react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-import {pfp} from "../public/pfp2.png"
 import Image from "next/image";
 
 export default function Home() {
