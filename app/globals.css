@@ -1,0 +1,112 @@
+@import '@fontsource/space-grotesk/400.css';
+@import '@fontsource/space-grotesk/500.css';
+@import '@fontsource/space-grotesk/700.css';
+@import '@fontsource/outfit/400.css';
+@import '@fontsource/outfit/500.css';
+@import '@fontsource/outfit/600.css';
+@import '@fontsource/outfit/700.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 240 10% 3.9%;
+  --foreground: 0 0% 98%;
+  --card: 240 10% 3.9%;
+  --card-foreground: 0 0% 98%;
+  --popover: 240 10% 3.9%;
+  --popover-foreground: 0 0% 98%;
+  --primary: 47 95% 55%;
+  --primary-foreground: 240 5.9% 10%;
+  --secondary: 240 3.7% 15.9%;
+  --secondary-foreground: 0 0% 98%;
+  --muted: 240 3.7% 15.9%;
+  --muted-foreground: 240 5% 64.9%;
+  --accent: 47 95% 55%;
+  --accent-foreground: 240 5.9% 10%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 240 3.7% 15.9%;
+  --input: 240 3.7% 15.9%;
+  --ring: 47 95% 55%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-outfit;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-space-grotesk;
+  }
+}
+
+.glow {
+  text-shadow: 0 0 20px hsl(var(--primary) / 0.3);
+}
+
+.gradient-border {
+  background: linear-gradient(to right, hsl(var(--primary)), hsl(var(--secondary)));
+  padding: 1px;
+}
+
+.nav-link {
+  @apply relative px-4 py-2 text-sm font-medium transition-colors hover:text-primary;
+}
+
+.nav-link::after {
+  content: '';
+  @apply absolute left-0 bottom-0 w-0 h-0.5 bg-primary transition-all duration-300;
+}
+
+.nav-link:hover::after {
+  @apply w-full;
+}
+
+/* .hero-image-container {
+  position: relative;
+  width: 400px;
+  height: 400px;
+}
+
+.hero-image-container::before {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  background: linear-gradient(to right, hsl(var(--primary)), hsl(var(--secondary)));
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.hero-image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  z-index: 1;
+} */
+
+.project-card {
+  @apply relative overflow-hidden rounded-xl;
+  background: linear-gradient(to bottom right, hsl(var(--secondary)), hsl(var(--background)));
+}
+
+.project-card::before {
+  content: '';
+  @apply absolute inset-0;
+  background: linear-gradient(to right, hsl(var(--primary) / 0.2), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.project-card:hover::before {
+  opacity: 1;
+}
+
+.dancing-script {
+  font-family: var(--font-dancing-script);
+}
