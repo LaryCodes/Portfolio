@@ -1,6 +1,6 @@
 "use client";
 
-import { Github, Mail, Linkedin, FileCode2, Database, Layout, Cpu, Code2, ExternalLink } from "lucide-react";
+import { Github, Mail, Linkedin, FileCode2, Database, Layout, Cpu, Code2, ExternalLink, X, Instagram, InstagramIcon } from "lucide-react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef, useState } from "react";
 import Image from "next/image";
@@ -196,6 +196,12 @@ export default function Home() {
                     <Linkedin className="w-6 h-6 text-foreground" />
                   </div>
                 </a>
+                <a href="https://instagram.com/lary.codes" target="_blank" rel="noopener noreferrer"
+                  className="gradient-border rounded-full">
+                  <div className="p-3 bg-background rounded-full hover:bg-secondary transition-colors">
+                    <InstagramIcon className="w-6 h-6 text-foreground" />
+                  </div>
+                </a>
               </div>
             </motion.div>
           </div>
@@ -354,16 +360,47 @@ export default function Home() {
             <p className="text-muted-foreground mb-8">
               I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.
             </p>
+            <div className="grid grid-cols-2">
             <a
-              href="mailto:larycodes@gmail.com"
+              href="https://wa.me/+923220237437"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-block gradient-border rounded-full"
             >
               <div className="px-8 py-3 bg-background rounded-full hover:bg-secondary transition-colors">
                 <span className="text-foreground font-medium">Say Hello 👋</span>
               </div>
             </a>
+            <div className="flex justify-center items-center gap-4">
+            <a href="https://github.com/larycodes" target="_blank" rel="noopener noreferrer" 
+                  className="gradient-border rounded-full">
+                  <div className="p-3 bg-background rounded-full hover:bg-secondary transition-colors">
+                    <Github className="w-4 h-4 text-foreground" />
+                  </div>
+                </a>
+                <a href="mailto:larycodes@gmail.com"
+                  className="gradient-border rounded-full">
+                  <div className="p-3 bg-background rounded-full hover:bg-secondary transition-colors">
+                    <Mail className="w-4 h-4 text-foreground" />
+                  </div>
+                </a>
+                <a href="https://linkedin.com/in/larycodes" target="_blank" rel="noopener noreferrer"
+                  className="gradient-border rounded-full">
+                  <div className="p-3 bg-background rounded-full hover:bg-secondary transition-colors">
+                    <Linkedin className="w-4 h-4 text-foreground" />
+                  </div>
+                </a>
+                <a href="https://instagram.com/lary.codes" target="_blank" rel="noopener noreferrer"
+                  className="gradient-border rounded-full">
+                  <div className="p-3 bg-background rounded-full hover:bg-secondary transition-colors">
+                    <InstagramIcon className="w-4 h-4 text-foreground" />
+                  </div>
+                </a>
+                </div>
+              </div>
           </motion.div>
         </div>
+              
       </section>
     </div>
   );
