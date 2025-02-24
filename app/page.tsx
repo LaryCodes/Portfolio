@@ -2,8 +2,9 @@
 
 import { Github, Mail, Linkedin, FileCode2, Database, Layout, Cpu, Code2, ExternalLink } from "lucide-react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import Image from "next/image";
+import { FiMenu, FiX } from "react-icons/fi";
 
 export default function Home() {
   const targetRef = useRef<HTMLDivElement>(null);
@@ -74,6 +75,9 @@ export default function Home() {
     }
   };
 
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+
   return (
     <div className="min-h-screen bg-background" ref={targetRef}>
       {/* Navigation */}
@@ -87,6 +91,19 @@ export default function Home() {
             >
               <Code2 className="w-6 h-6 text-foreground" />
               <span className="text-3xl md:text-4xl dancing-script font-bold text-foreground">Muhammad Laraib</span>
+              <div className="fixed right-4 top-4">
+              <button
+              className="md:hidden"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              aria-label="Toggle menu"
+            >
+              {isMenuOpen ? (
+                <FiX className="text-3xl text-white" />
+              ) : (
+                <FiMenu className="text-3xl text-white" />
+              )}
+            </button>
+            </div>
             </motion.div>
             <motion.div
               initial={{ opacity: 0, y: -10 }}
@@ -103,6 +120,23 @@ export default function Home() {
                 </button>
               ))}
             </motion.div>
+            {isMenuOpen && (
+              <motion.div
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="absolute flex flex-col gap-4 top-16 right-4 bg-background p-4 rounded-lg shadow-lg"
+              >
+                {sections.map((section) => (
+                  <button
+                    key={section.id}
+                    onClick={() => scrollToSection(section.id)}
+                    className="nav-link"
+                  >
+                    {section.label}
+                  </button>
+                ))}
+              </motion.div>
+            )}
           </div>
         </div>
       </nav>
