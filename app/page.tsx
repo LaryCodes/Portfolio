@@ -360,7 +360,7 @@ export default function Home() {
             <p className="text-muted-foreground mb-8">
               I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.
             </p>
-            <div className="grid grid-cols-2">
+            <div className="grid grid-cols-2 gap-6 mr-3">
             <a
               href="https://wa.me/+923220237437"
               target="_blank"
@@ -371,7 +371,7 @@ export default function Home() {
                 <span className="text-foreground font-medium">Say Hello 👋</span>
               </div>
             </a>
-            <div className="flex justify-center items-center gap-4">
+            <div className="flex justify-center items-center gap-2">
             <a href="https://github.com/larycodes" target="_blank" rel="noopener noreferrer" 
                   className="gradient-border rounded-full">
                   <div className="p-3 bg-background rounded-full hover:bg-secondary transition-colors">
