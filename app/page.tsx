@@ -33,14 +33,37 @@ export default function Home() {
     {
       title: "E-commerce Platform",
       description: "Full-stack e-commerce solution with advanced filtering and real-time inventory.",
-      tech: ["React", "Node.js", "MongoDB", "Stripe"],
+      tech: ["Next.JS", "Node.js", "MongoDB Atlas", "TailwindCSS", "Shadcn UI", "Clerk", "Stripe"],
       image: "https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&q=80",
+      link: "https://bandage-xi.vercel.app/",
+    },
+    {
+      title: "Portfolio -- built with Flask",
+      description: "A real-time chat application with AI-powered features using Next.js and Python.",
+      tech: ["Next.js", "Python", "WebSocket", "OpenAI"],
+      image: "/flask-portfolio.jpeg",
+      link: "https://github.com/larycodes/flask-based-portfolio",
     },
     {
       title: "Task Management System",
       description: "Collaborative task management tool with real-time updates and analytics.",
       tech: ["TypeScript", "React", "Firebase", "Charts"],
       image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&q=80",
+
+    },
+    {
+      title: "Task Management System",
+      description: "Collaborative task management tool with real-time updates and analytics.",
+      tech: ["TypeScript", "React", "Firebase", "Charts"],
+      image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&q=80",
+
+    },
+    {
+      title: "Task Management System",
+      description: "Collaborative task management tool with real-time updates and analytics.",
+      tech: ["TypeScript", "React", "Firebase", "Charts"],
+      image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&q=80",
+
     },
   ];
 
@@ -227,7 +250,9 @@ export default function Home() {
                     className="w-full h-full object-cover rounded-t-xl"
                   />
                   <div className="absolute inset-0 bg-background/60 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
-                    <ExternalLink className="w-8 h-8 text-foreground" />
+                    <ExternalLink 
+                    onClick={() => window.open(project.link, '_blank')}
+                    className="w-8 h-8 text-foreground" />
                   </div>
                 </div>
                 <div className="p-6">
