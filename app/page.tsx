@@ -5,6 +5,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef, useState } from "react";
 import Image from "next/image";
 import { FiMenu, FiX } from "react-icons/fi";
+import Link from "next/link";
 
 export default function Home() {
   const targetRef = useRef<HTMLDivElement>(null);
@@ -90,7 +91,9 @@ export default function Home() {
               className="flex items-center space-x-2"
             >
               <Code2 className="w-6 h-6 text-foreground" />
+              <Link href="/">
               <span className="text-3xl md:text-4xl dancing-script font-bold text-foreground">Muhammad Laraib</span>
+              </Link>
               <div className="fixed right-4 top-4">
               <button
               className="md:hidden"
@@ -360,18 +363,18 @@ export default function Home() {
             <p className="text-muted-foreground mb-8">
               I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.
             </p>
-            <div className="grid grid-cols-2 gap-6 mr-3">
+            <div className=" sm:grid sm:grid-cols-2 sm:gap-6 mr-3">
             <a
               href="https://wa.me/+923220237437"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block gradient-border rounded-full"
             >
-              <div className="px-8 py-3 bg-background rounded-full hover:bg-secondary transition-colors">
+              <div className="px-8 py-4 bg-background rounded-full hover:bg-secondary transition-colors">
                 <span className="text-foreground font-medium">Say Hello 👋</span>
               </div>
             </a>
-            <div className="flex justify-center items-center gap-2">
+            <div className="mt-3 flex justify-center items-center gap-2">
             <a href="https://github.com/larycodes" target="_blank" rel="noopener noreferrer" 
                   className="gradient-border rounded-full">
                   <div className="p-3 bg-background rounded-full hover:bg-secondary transition-colors">
